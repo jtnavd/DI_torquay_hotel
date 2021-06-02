@@ -8,12 +8,24 @@ class Staff(models.Model):
     last_modified = models.DateTimeField()
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+class BookingCheck(models.Model):
+    client_id = models.ForeignKey()
+    room_id = models.ManyToManyField()
+    room_type = models.ManyToManyField()
+    date_in = models.DateTimeField()
+    date_out = models.DateTimeField()    
 
-class Prof_Guest(models.Model):
+class BookingApproved(models.Model):
     pass
 
-# class User(models.Model):
-#     profile = models.ForeignKey(Staff)
+class CancelledBooking(models.Model):
+    pass
+
+class Customer(models.Model):
+    profile = models.ForeignKey()
+    # client_id = 
+    # client_name = 
+    client_message = models.ForeignKey()
 
 
 

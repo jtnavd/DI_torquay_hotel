@@ -21,7 +21,7 @@ class Hotel(models.Model):
 
 
 class Room(models.Model):
-    Room_nb = models.SmallIntegerField(unique=True)
+    room_nb = models.SmallIntegerField(unique=True)
     rate_id = models.ForeignKey(Rate, on_delete = models.CASCADE)
 
 

@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.main {
+    padding: 1em;
+    height: 90vh;
+} 
+
+.cont {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.menutop {
+    display: flex;
+    flex-direction: column;
+}

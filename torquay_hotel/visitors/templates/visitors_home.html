@@ -1,0 +1,32 @@
+{%   extends 'partials/base.html' %}
+{% load static  %}
+{% load ratings %}
+
+{% block title %}Guest Home Page{% endblock %}
+
+{% block content  %}
+
+<div class="cont">
+    <!-- reminder: stylesheet is in static/css/main.css -->
+    <h1>Welcome to Torquay Hotel</h1>
+    <h2>We hope you enjoy your stay</h2>
+    <h5>Today is {{today}}</h5>
+    <hr>
+    <h4>Our Address</h4>
+    <p>{{ hotel.address }}</p>
+    <hr>
+    <h4>Description</h4>
+    <p>{{ hotel.description }}</p>
+</div>
+
+<div class="cont-row">
+    <div class="colonne">
+        <p>Please rate us:</p>
+        {% ratings hotel %}
+    </div>
+    <div class="colonne">
+        <p>Check availability</p>
+    </div>
+</div>
+
+{% endblock  %}

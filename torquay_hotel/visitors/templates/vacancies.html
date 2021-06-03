@@ -1,0 +1,24 @@
+{%   extends 'partials/base.html' %}
+{% load static  %}
+
+{% block title %}Vacancies{% endblock %}
+
+{% block content  %}
+
+<div class="cont">
+    <!-- reminder: stylesheet is in static/css/main.css -->
+    <h1>Checking availability</h1>
+
+    <form method="post" action="/create/" class="form-group">
+		{% csrf_token %}
+		<div class="input-group mb-3">
+	  		<div class="input-group-prepend">
+	  		<button name="save" type="submit" class="btn btn-success">Create</button>
+	  		</div>
+	  		{{ form }}
+		</div>
+	</form>
+
+</div>
+
+{% endblock  %}

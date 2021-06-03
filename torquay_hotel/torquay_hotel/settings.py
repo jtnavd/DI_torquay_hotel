@@ -73,16 +73,7 @@ WSGI_APPLICATION = 'torquay_hotel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'torquay',
-        'USER': 'postgres',
-        'PASSWORD': 'postgresMandelieu',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
+
 
 
 # Password validation
@@ -127,3 +118,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try : 
+    from . local_settings import *
+except ImportError:
+    pass
+
+
